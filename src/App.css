@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  body {
+    background: var(--color-bg);
   }
-  to {
-    transform: rotate(360deg);
+  
+  a {
+    color: unset;
+    text-decoration: none;
   }
+  
+     /* global 92%+ browsers support */
+ .gradient__bg {
+
+    background:radial-gradient(circle at top left, rgba(17, 83, 0, 0.74) 0%, rgb(4, 24, 4, 1),transparent 70%), 
+               radial-gradient(circle at 100% 70%, rgba(17, 83, 0, 0.74) 0%, rgb(4, 24, 4, 1),transparent 50%);
+    background-repeat: no-repeat;
+  }
+
+  .gradient__bg2 {
+    background:radial-gradient(circle at top left, rgba(17, 83, 0, 0.74) 0%, rgba(4, 24, 4, 1) 25%);
+
+  }
+
+  .gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .section__padding {
+    padding: 64px 96px;
+  }
+  
+  .section__margin {
+    margin: 64px 96px;
+  }
+
+  .scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+@keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .section__padding {
+      padding: 64px;
+    }
+  
+    .section__margin {
+      margin: 64px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .section__padding {
+      padding: 64px 12px;
+    }
+  
+    .section__margin {
+      margin: 64px 12px;
+    }  
+  }
